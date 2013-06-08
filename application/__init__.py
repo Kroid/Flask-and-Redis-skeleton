@@ -8,6 +8,8 @@ app_run_args = {}
 def create_app(mode = "production"):
 	global app
 	app = Flask("application")
+	app.session_interface = RedisSessionInterface()
+	
 	global app_run_args
 	app_run_args = {'port': 5000, 'host': '127.0.0.1'}
 
