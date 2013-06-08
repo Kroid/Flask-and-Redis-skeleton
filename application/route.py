@@ -1,5 +1,6 @@
 from application import app
+from models import example
 
-@app.route('/')
-def index():
-	return "Hello World!";
+@app.route('/', methods = ['GET', 'POST', 'PUT', 'DELETE'])
+def _index():
+	return example.start();
