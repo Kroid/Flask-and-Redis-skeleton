@@ -3,4 +3,4 @@ from models import example
 
 @app.route('/', methods = ['GET', 'POST', 'PUT', 'DELETE'])
 def _index():
-	return example.start();
+	return example.start()
